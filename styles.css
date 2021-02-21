@@ -3,3 +3,58 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body {
+    width: 100vw;
+    height: 100vh;
+    cursor: none;
+}
+
+#reticle {
+    border-radius: 50%;
+    position: absolute;
+}
+
+#outer-circle, #inner-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px red solid;
+}
+
+#outer-circle {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    transform: translateX(-22.5px);
+}
+
+#inner-circle {
+    width: 25px;
+    height: 25px;
+}
+
+#point {
+    width: 5px;
+    height: 5px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+#crosshairs {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#x-hair, #y-hair {
+    width: 2px;
+    height: 50px;
+    background-color: red;
+}
+
+#x-hair {
+    transform: rotate(90deg);
+}
