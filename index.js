@@ -1,6 +1,11 @@
 //variables
 const reticle = document.getElementById('reticle');
-const body = document.body;
+
+const spawn = document.getElementById('spawn');
+const width = spawn.clientWidth;
+const height = spawn.clientHeight;
+
+let counter = 0;
 
 //mouse tracker
 const mouse = {
@@ -17,22 +22,30 @@ window.addEventListener('mousemove', function(event){
 
 //target appearance
 
-const width = body.clientWidth;
-const height = body.clientHeight;
+setInterval(function(){ 
+    const newTargets = document.createElement('div');
+    newTargets.style.top = Math.random() * height + 'px';
+    newTargets.style.left = Math.random() * width + 'px';
+    newTargets.className = 'target';
 
-targets();
+    let randomSize = Math.random() * 100;
+    newTargets.style.width = randomSize + 'px';
+    newTargets.style.height = randomSize + 'px';
+    spawn.appendChild(newTargets); 
 
-function targets() {
-    setInterval(function(){
-        body.innerHTML = 
-            `<figure class = 'target'
-                style = '
-                    top: ${Math.random()*height}px;
-                    left: ${Math.random()*width}px;
-                '
-            ></figure>`
-    }, 1000);
+    let targets = document.getElementsByClassName('target');
+}, 1000);
+
+//break targets
+
+for (i = 0; i <= targets.length; i++){
+    targets[i].addEventListener('click', function(){
+        targets[i].remove();
+    });
 }
+
+
+
 
 
 
