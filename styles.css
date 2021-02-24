@@ -1,3 +1,4 @@
+/* environment */
 * {
     padding: 0;
     margin: 0;
@@ -17,6 +18,32 @@ body {
     height: 90vh;
 }
 
+/* figures */
+#scoreBoard {
+    height: 4vh;
+    width: 100vw;
+    border: style 1px black;
+    background-color: gray;
+    z-index: 1;
+}
+
+#loser {
+    position: absolute;
+    top: 15vh;
+    left: 25vw;
+
+    width: 50vw;
+    height: 50vh;
+
+    border-radius: 5%;
+    border: black 1px solid;
+    background-color: gray;
+    z-index: 1;
+
+    display: none;
+}
+
+/* cursor */
 #reticle {
     border-radius: 50%;
     position: absolute;
@@ -68,7 +95,10 @@ body {
     transform: rotate(90deg);
 }
 
+/* targets */
+
 .target {
     background-color: blue;
     position: absolute;
 }
+
