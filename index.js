@@ -66,6 +66,12 @@ function targetFx() {
     }
 }
 
+//reset
+
+reset.addEventListener('click', function() {
+    location.reload();
+});
+
 
 
 

@@ -40,7 +40,7 @@ body {
     background-color: gray;
     z-index: 1;
 
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
     flex-flow: column wrap;
