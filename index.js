@@ -35,20 +35,21 @@ setInterval(function(){
     newTargets.style.width = randomSize + 'px';
     newTargets.style.height = randomSize + 'px';
     spawn.appendChild(newTargets); 
-}, 10000);
+}, 2000);
 
 //break targets
 
 
+setInterval(targetFx, 2000);
 
-for (i = 0; i < targets.length; i++){
-    targets[i].addEventListener('click', function(){
-        targets[i].remove();
-    });
+
+function targetFx() {
+    for (i = 0; i < targets.length; i++){
+        targets[i].addEventListener('click', function(){
+            this.remove();
+        });
+    }
 }
-
-
-
 
 
 
