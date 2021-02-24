@@ -59,12 +59,12 @@ const spawnInterval = setInterval(function(){
     newTargets.style.height = randomSize + 10 + 'px';
     spawn.appendChild(newTargets); 
 
-    if (targets.length === 10) {
+    if (targets.length === 5) {
         clearInterval(spawnInterval);
         loser.style.display = 'flex';
         finalScore.innerHTML = `<p>${scoreNumber}</p>`;
     }
-}, 2000);
+}, 1000);
 
 //break targets
 
@@ -75,7 +75,6 @@ function targetFx() {
         targets[i].addEventListener('click', function(){
             this.remove();
             scoreNumber+= 100;
-            console.log(tick);
             score.innerHTML = `Score: ${scoreNumber}`
         });
     }
