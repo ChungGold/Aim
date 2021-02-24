@@ -64,7 +64,7 @@ const spawnInterval = setInterval(function(){
         loser.style.display = 'flex';
         finalScore.innerHTML = `<p>${scoreNumber}</p>`;
     }
-}, 1000);
+}, 1500);
 
 //break targets
 
