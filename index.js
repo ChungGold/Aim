@@ -33,11 +33,24 @@ window.addEventListener('mousemove', function(event){
 //target appearance
 
 const spawnInterval = setInterval(function(){ 
+    let movement = Math.floor(Math.random() * 5);
+    console.log(movement);
+
     const newTargets = document.createElement('div');
     newTargets.style.top = Math.random() * height + 'px';
     newTargets.style.left = Math.random() * width + 'px';
     newTargets.className = 'target';
     newTargets.style.borderRadius = '50%';
+
+    if (movement === 0){
+        newTargets.className = 'upDown target';
+    } else if (movement === 1){
+        newTargets.className = 'leftRight target';
+    } else if (movement === 2){
+        newTargets.className = 'diagRight target';
+    } else if (movement === 3){
+        newTargets.className = 'diagLeft target';
+    }
 
     let randomSize = Math.random() * 100;
     newTargets.style.width = randomSize + 10 + 'px';
