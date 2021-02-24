@@ -33,7 +33,7 @@ window.addEventListener('mousemove', function(event){
 //target appearance
 
 const spawnInterval = setInterval(function(){ 
-    let movement = Math.floor(Math.random() * 5);
+    let movement = Math.floor(Math.random() * 4);
     console.log(movement);
 
     const newTargets = document.createElement('div');
@@ -51,6 +51,8 @@ const spawnInterval = setInterval(function(){
     } else if (movement === 3){
         newTargets.className = 'diagLeft target';
     }
+
+    // newTargets.getAnimations
 
     let randomSize = Math.random() * 100;
     newTargets.style.width = randomSize + 10 + 'px';

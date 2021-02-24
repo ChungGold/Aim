@@ -139,41 +139,41 @@ body {
 /* movements */
 
 .upDown {
-    animation: infinite ease-in-out alternate upDown;
+    animation: infinite ease-in-out alternate 2s upDown;
 }
 
 @keyframes upDown {
     100% {
-        transform: translateY(50px);
+        transform: translateY(100px);
     }
 }
 
 .leftRight {
-    animation: infinite ease-in-out alternate leftRight;
+    animation: infinite ease-in-out alternate 2s leftRight;
 }
 
 @keyframes leftRight {
     100% {
-        transform: translateX(50px);
+        transform: translateX(100px);
     }
 }
 
 .diagRight {
-    animation: infinite ease-in-out alternate diagRight;
+    animation: infinite ease-in-out alternate 2s diagRight;
 }
 
 @keyframes diagRight {
     100% {
-        transform: translateX(50px) translateY(50px);
+        transform: translateX(100px) translateY(100px);
     }
 }
 
 .diagLeft {
-    animation: infinite ease-in-out alternate diagLeft;
+    animation: infinite ease-in-out alternate 2s diagLeft;
 }
 
 @keyframes diagLeft {
     100% {
-        transform: translateX(50px) translateY(-50px);
+        transform: translateX(100px) translateY(-100px);
     }
 }
