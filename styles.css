@@ -36,11 +36,45 @@ body {
     height: 50vh;
 
     border-radius: 5%;
-    border: black 1px solid;
+    border: black 8px solid;
     background-color: gray;
     z-index: 1;
 
-    display: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+#loser h1 {
+    margin-top: 1rem;
+}
+
+#finalScore {
+    width: 25vw;
+    height: 10vw;
+    border: black 2px solid;
+    text-align: center;
+}
+
+#finalScore p {
+    font-size: 10rem;
+}
+
+#againButton {
+    width: 12.5vw;
+    height: 3vw;
+    border: black 4px solid;
+    margin-bottom: 1rem;
+
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    100% {
+        filter: opacity(1);
+    }
 }
 
 /* cursor */

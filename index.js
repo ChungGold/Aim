@@ -7,6 +7,9 @@ const width = spawn.clientWidth;
 const height = spawn.clientHeight;
 
 const targets = document.getElementsByClassName('target');
+const loser = document.getElementById('loser');
+const finalScore = document.getElementById('finalScore');
+const reset = document.getElementById('againButton');
 
 let counter = 0;
 
@@ -43,6 +46,8 @@ const spawnInterval = setInterval(function(){
 
     if (targets.length === 10) {
         clearInterval(spawnInterval);
+        loser.style.display = 'flex';
+        finalScore.innerHTML = `<p>${scoreNumber}</p>`;
     }
 }, 2000);
 
