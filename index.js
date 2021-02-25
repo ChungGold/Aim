@@ -10,12 +10,14 @@ const targets = document.getElementsByClassName('target');
 const loser = document.getElementById('loser');
 const finalScore = document.getElementById('finalScore');
 const reset = document.getElementById('againButton');
+const laser = new Audio('laser.mp3');
 
 let counter = 0;
 
-let tick = 0;
+let tick = 5000;
 
 let scoreNumber = 0;
+
 
 //mouse tracker
 const mouse = {
@@ -30,11 +32,16 @@ window.addEventListener('mousemove', function(event){
     reticle.style.left = mouse.x - 3 + 'px';
 });
 
+//sound
+window.addEventListener('click', function(){
+    laser.volume = .06125;
+    laser.play();
+});
+
 //target appearance
 
 const spawnInterval = setInterval(function(){ 
     let movement = Math.floor(Math.random() * 4);
-    console.log(movement);
 
     const newTargets = document.createElement('div');
     newTargets.style.top = Math.random() * height + 'px';
@@ -64,7 +71,7 @@ const spawnInterval = setInterval(function(){
         loser.style.display = 'flex';
         finalScore.innerHTML = `<p>${scoreNumber}</p>`;
     }
-}, 1200);
+}, 1400);
 
 //break targets
 
