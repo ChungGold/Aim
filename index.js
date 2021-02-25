@@ -33,8 +33,9 @@ window.addEventListener('mousemove', function(event){
 });
 
 //sound
+laser.volume = .06125;
+
 window.addEventListener('click', function(){
-    laser.volume = .06125;
     laser.play();
 });
 
@@ -80,6 +81,7 @@ setInterval(targetFx, 2000);
 function targetFx() {
     for (i = 0; i < targets.length; i++){
         targets[i].addEventListener('click', function(){
+            laser.play();
             this.remove();
             scoreNumber+= 100;
             score.innerHTML = `Score: ${scoreNumber}`
