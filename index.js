@@ -10,7 +10,6 @@ const targets = document.getElementsByClassName('target');
 const loser = document.getElementById('loser');
 const finalScore = document.getElementById('finalScore');
 const reset = document.getElementById('againButton');
-const laser = new Audio('laser.mp3');
 
 let counter = 0;
 
@@ -33,9 +32,10 @@ window.addEventListener('mousemove', function(event){
 });
 
 //sound
-laser.volume = .06125;
 
 window.addEventListener('click', function(){
+    const laser = new Audio('laser.mp3');
+    laser.volume = .06125;
     laser.play();
 });
 
@@ -81,6 +81,8 @@ setInterval(targetFx, 2000);
 function targetFx() {
     for (i = 0; i < targets.length; i++){
         targets[i].addEventListener('click', function(){
+            const laser = new Audio('laser.mp3');
+            laser.volume = .06125;
             laser.play();
             this.remove();
             scoreNumber+= 100;
